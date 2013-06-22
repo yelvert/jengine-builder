@@ -1,0 +1,6 @@
+[submodule "jengine"]
+	path = app/node_modules/jengine
+	url = git@github.com:yelvert/jengine.git
+[submodule "underscore"]
+	path = app/node_modules/underscore
+	url = https://github.com/documentcloud/underscore.git
