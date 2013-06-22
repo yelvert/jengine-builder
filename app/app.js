@@ -1,5 +1,4 @@
 var app = module.exports = require('appjs');
-var JEngine = require('jengine');
 
 app.serveFilesFrom(__dirname + '/content');
 
@@ -83,6 +82,7 @@ window.on('create', function(){
   window.frame.show();
   window.frame.center();
   window.frame.setMenuBar(menubar);
+  return;
 });
 
 window.on('ready', function(){
@@ -90,6 +90,7 @@ window.on('ready', function(){
   window.require = require;
   window.process = process;
   window.module = module;
+  window.JEngine = require('jengine');
   window.frame.openDevTools();
 
   function F12(e){ return e.keyIdentifier === 'F12' }
