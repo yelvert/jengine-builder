@@ -1,0 +1,17 @@
+{
+  "main": "index.html",
+  "name": "JEngineBuilder",
+  "description": "JEngine Builder",
+  "version": "0.0.0",
+  "keywords": [
+    "jengine",
+    "builder"
+  ],
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "width": 1024,
+    "height": 768,
+    "position": "center"
+  }
+}

@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>JEngine Builder</title>
+  <script type="text/javascript">
+    gui = require('nw.gui');
+    guiWindow = gui.Window.get();
+    guiWindow.showDevTools();
+    _ = require('underscore');
+    $ = require('jquery');
+    Application = require('jengine_builder');
+    view = new Application.Views.Page();
+    view.render();
+  </script>
+</head>
+<body>
+</body>
+</html>
