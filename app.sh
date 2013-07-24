@@ -10,6 +10,6 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
-./app/bin/node --harmony ./app/app.js
+./bin/node --harmony ./app.js
 
 read -p "Press [Enter] key to close..."
