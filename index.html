@@ -2,14 +2,16 @@
 <head>
   <title>JEngine Builder</title>
   <script type="text/javascript">
-    gui = require('nw.gui');
-    guiWindow = gui.Window.get();
-    guiWindow.showDevTools();
-    _ = require('underscore');
-    $ = require('jquery');
-    Application = require('jengine_builder');
-    view = new Application.Views.Page();
-    view.render();
+    nwGui = require('nw.gui');
+    nwGui.Window.get().showDevTools();
+    browserRequire = require('browser-require');
+    $ = browserRequire('jquery');
+    _ = browserRequire('underscore');
+    Backbone = browserRequire('backbone');
+    JEngineBuilder = browserRequire('jengine-builder');
+    $(function() {
+      JEngineBuilder.start();
+    });
   </script>
 </head>
 <body>

@@ -1,12 +1,15 @@
 {
   "main": "index.html",
-  "name": "JEngineBuilder",
+  "name": "jengine-builder",
   "description": "JEngine Builder",
   "version": "0.0.0",
   "keywords": [
     "jengine",
     "builder"
   ],
+  "scripts": {
+    "start": "./jengine-builder.sh"
+  },
   "window": {
     "toolbar": true,
     "frame": true,

@@ -13,6 +13,13 @@ cd $DIR
 PLATFORM="$(uname -s | awk '{print tolower($0)}')"
 PROCESSOR="$(uname -p)"
 
+$(cat /dev/null > debug.log)
+
+TAIL="tail -f debug.log"
+eval ${TAIL} &
+TAIL_PID=`ps ax | grep -e "${TAIL}" | grep -v grep | awk '{print $1}'`
+trap "kill $TAIL_PID" INT
+
 $(./bin/${PLATFORM}/${PROCESSOR}/nw .)
 
-read -p "Press [Enter] key to close..."
+kill $TAIL_PID
