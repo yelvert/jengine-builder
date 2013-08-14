@@ -7,10 +7,13 @@
     browserRequire = require('browser-require');
     $ = browserRequire('jquery');
     _ = browserRequire('underscore');
-    Backbone = browserRequire('backbone');
+    browserRequire('localstorage-object');
+    Backbone = browserRequire('custom-backbone');
     JEngineBuilder = browserRequire('jengine-builder');
+    var path = require('path');
+    var opts = require(path.join(process.cwd(), 'package.json'));
     $(function() {
-      JEngineBuilder.start();
+      Application = new JEngineBuilder(opts['jengine-builder']);
     });
   </script>
 </head>
