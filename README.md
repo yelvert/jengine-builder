@@ -1,4 +1,0 @@
-jengine
-=======
-
-Javascript Game Engine
