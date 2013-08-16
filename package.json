@@ -1,5 +1,5 @@
 {
-  "main": "index.html",
+  "main": "app://jengine-builder/index.html",
   "name": "jengine-builder",
   "description": "JEngine Builder",
   "version": "0.0.0",
