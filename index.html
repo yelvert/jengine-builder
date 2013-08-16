@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>JEngine Builder</title>
+  <link rel="stylesheet/less" type="text/css" href="assets/css/jengine-builder.less" />
+  <script type="text/javascript">
+    browserRequire = require('browser-require');
+    $ = browserRequire('jquery');
+    browserRequire('./node_modules/bootstrap/dist/js/bootstrap');
+    _ = browserRequire('underscore');
+    Backbone = browserRequire('custom-backbone');
+    browserRequire('localstorage-object');
+    requireTemplate = require('require-template');
+    requireTemplate.addPath('node_modules/jengine-builder/templates');
+
+    nwGui = require('nw.gui');
+    nwGui.Window.get().showDevTools();
+
+    JEngineBuilder = browserRequire('jengine-builder');
+    $(function () {
+      var path = require('path');
+      var opts = require(path.join(process.cwd(), 'package.json'));
+      Application = new JEngineBuilder(opts['jengine-builder']);
+      Application.start();
+    });
+    less = {
+      env: "development", // or "production"
+      async: false,       // load imports async
+      fileAsync: false,   // load imports async when in a page under
+                          // a file protocol
+      poll: 1000,         // when in watch mode, time in ms between polls
+      functions: {},      // user functions, keyed by name
+      dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+      relativeUrls: false,// whether to adjust url's to be relative
+                          // if false, url's are already relative to the
+                          // entry less file
+      rootpath: "app://jengine-builder/"// a path to add on to the start of every url
+                          //resource
+    };
+  </script>
+  <script type="text/javascript" src="app://jengine-builder/assets/js/less.js"></script>
+</head>
+<body>
+</body>
+</html>

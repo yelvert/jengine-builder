@@ -1,0 +1,20 @@
+{
+  "main": "app://jengine-builder/index.html",
+  "name": "jengine-builder",
+  "description": "JEngine Builder",
+  "version": "0.0.0",
+  "keywords": [
+    "jengine",
+    "builder"
+  ],
+  "scripts": {
+    "start": "./jengine-builder.sh"
+  },
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "width": 1024,
+    "height": 768,
+    "position": "center"
+  }
+}
