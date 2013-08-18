@@ -1,0 +1,82 @@
+{
+  "downloads": {
+    "linux": {
+      "ia32": {
+        "files": {
+          "node-webkit/linux/ia32/nw.pak": "bin/nw.pak",
+          "node-webkit/linux/ia32/libffmpegsumo.so": "bin/nlibffmpegsumo.so"
+        },
+        "executables": {
+          "node-webkit/linux/ia32/nw": "bin/nw",
+          "node-webkit/linux/ia32/nwsnapshot": "bin/nwsnapshot"
+        }
+      },
+      "x64": {
+        "files": {
+          "node-webkit/linux/x64/nw.pak": "bin/nw.pak",
+          "node-webkit/linux/x64/libffmpegsumo.so": "bin/nlibffmpegsumo.so"
+        },
+        "executables": {
+          "node-webkit/linux/x64/nw": "bin/nw",
+          "node-webkit/linux/x64/nwsnapshot": "bin/nwsnapshot"
+        }
+      }
+    },
+    "mac": {
+      "directories": [
+        "bin/node-webkit.app",
+        "bin/node-webkit.app/Contents",
+        "bin/node-webkit.app/Contents/Frameworks",
+        "bin/node-webkit.app/Contents/MacOS",
+        "bin/node-webkit.app/Contents/Resources",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Libraries",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/MacOS",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/MacOS",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents",
+        "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS"
+      ],
+      "files": {
+        "node-webkit/osx/node-webkit.app": "bin/node-webkit.app",
+        "node-webkit/osx/nwsnapshot": "bin/nwsnapshot",
+        "node-webkit/osx/node-webkit.app/Contents/Info.plist": "bin/node-webkit.app/Contents/Info.plist",
+        "node-webkit/osx/node-webkit.app/Contents/PkgInfo": "bin/node-webkit.app/Contents/PkgInfo",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework.tmp": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework.tmp",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework.TOC": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/node-webkit Framework.TOC",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Libraries/ffmpegsumo.so": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Libraries/ffmpegsumo.so",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/English.lproj": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/English.lproj",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/nw.pak": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/nw.pak",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/English.lproj/HttpAuth.nib": "bin/node-webkit.app/Contents/Frameworks/node-webkit Framework.framework/Resources/English.lproj/HttpAuth.nib",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/Info.plist": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/Info.plist",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/PkgInfo": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/PkgInfo",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/MacOS/node-webkit Helper EH": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper EH.app/Contents/MacOS/node-webkit Helper EH",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/Info.plist": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/Info.plist",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/PkgInfo": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/PkgInfo",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/MacOS/node-webkit Helper NP": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper NP.app/Contents/MacOS/node-webkit Helper NP",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/Info.plist": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/Info.plist",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/PkgInfo": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/PkgInfo",
+        "node-webkit/osx/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/node-webkit Helper": "bin/node-webkit.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/node-webkit Helper",
+        "node-webkit/osx/node-webkit.app/Contents/MacOS/node-webkit": "bin/node-webkit.app/Contents/MacOS/node-webkit",
+        "node-webkit/osx/node-webkit.app/Contents/Resources/nw.icns": "bin/node-webkit.app/Contents/Resources/nw.icns"
+      }
+    },
+    "win": {
+      "files": {
+        "node-webkit/win/ffmpegsumo.dll": "ffmpegsumo.dll",
+        "node-webkit/win/icudt.dll": "icudt.dll",
+        "node-webkit/win/libEGL.dll": "libEGL.dll",
+        "node-webkit/win/libGLESv2.dll": "libGLESv2.dll",
+        "node-webkit/win/nw.exe": "nw.exe",
+        "node-webkit/win/nw.pak": "nw.pak",
+        "node-webkit/win/nwsnapshot.exe": "nwsnapshot.exe"
+      }
+    }
+  }
+}
