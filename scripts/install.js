@@ -59,7 +59,7 @@ commands.push(function () {
 Submodules
 **************************************************/
 commands.push(function () {
-  exec('git submodule init', {
+  exec('git submodule update', {
     cwd: process.cwd()
   }, function(){});
 });
