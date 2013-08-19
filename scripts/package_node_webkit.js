@@ -1,90 +1,24 @@
 #!/usr/bin/env node
 
-var zipper = require('adm-zip');
-var path = require('path');
-var fs = require('fs');
-var source = path.resolve(process.argv[0]);
-var destination = path.resolve(process.argv[1]);
-var commands = []
+var args = require('optimist').argv._,
+    logger = require('logger'),
+    path = require('path'),
+    fs = require('fs'),
+    source = path.resolve(args[0]),
+    destination = path.resolve(args[1]),
+    fstream = require('fstream'),
+    tar = require('tar'),
+    zlib = require('zlib')
+;
+
 if (!fs.existsSync(source)) {
   throw "Source path does not exist!";
 }
-if (!fs.existsSync(destination)) {
+if (!fs.existsSync(path.dirname(destination))) {
   throw "Destination path does not exist!";
 }
 
-/**************************************************
-Linux - x64
-**************************************************/
-commands.push(function() {
-  var zipFile = new AdmZip();
-  var childSource = path.join(source, 'linux_x64');
-  fs.readdir(childSource, function(err, files) {
-    if (err) {
-      throw err;
-    }
-    files.forEach(function(file) {
-      if (fs.stat(file).isFile()) {
-        zipFile.addLocalFile(path.join(childSource, file));
-      }
-    });
-    zipFile.writeZip(path.join(destination, 'linux_x64.zip'));
-  });
-});
-
-/**************************************************
-Linux - ia32
-**************************************************/
-commands.push(function() {
-  var zipFile = new AdmZip();
-  var childSource = path.join(source, 'linux_ia32');
-  fs.readdir(childSource, function(err, files) {
-    if (err) {
-      throw err;
-    }
-    files.forEach(function(file) {
-      if (fs.stat(file).isFile()) {
-        zipFile.addLocalFile(path.join(childSource, file));
-      }
-    });
-    zipFile.writeZip(path.join(destination, 'linux_ia32.zip'));
-  });
-});
-
-/**************************************************
-MacOSX
-**************************************************/
-commands.push(function() {
-  var zipFile = new AdmZip();
-  var childSource = path.join(source, 'darwin');
-  fs.readdir(childSource, function(err, files) {
-    if (err) {
-      throw err;
-    }
-    files.forEach(function(file) {
-      if (fs.stat(file).isFile()) {
-        zipFile.addLocalFile(path.join(childSource, file));
-      }
-    });
-    zipFile.writeZip(path.join(destination, 'darwin.zip'));
-  });
-});
-
-/**************************************************
-MacOSX
-**************************************************/
-commands.push(function() {
-  var zipFile = new AdmZip();
-  var childSource = path.join(source, 'win32');
-  fs.readdir(childSource, function(err, files) {
-    if (err) {
-      throw err;
-    }
-    files.forEach(function(file) {
-      if (fs.stat(file).isFile()) {
-        zipFile.addLocalFile(path.join(childSource, file));
-      }
-    });
-    zipFile.writeZip(path.join(destination, 'win32.zip'));
-  });
-});
+fstream.Reader({'path': source, 'type': 'Directory'})
+  .pipe(tar.Pack())
+  .pipe(zlib.Gzip())
+  .pipe(fstream.Writer({'path': path.join(destination, 'node-webkit.tar.gz')}));
