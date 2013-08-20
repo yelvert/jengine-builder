@@ -28,4 +28,6 @@ switch(platform) {
   default:
     throw 'Platform not supported!';
 }
-exec(nwPath + ' .')
+exec(nwPath + ' .', function() {
+  process.exit(0);
+});
