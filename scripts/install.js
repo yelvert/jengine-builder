@@ -61,7 +61,11 @@ Submodules
 commands.push(function () {
   exec('git submodule update', {
     cwd: process.cwd()
-  }, function(){});
+  }, function(){
+    exec('git submodule update', {
+      cwd: process.cwd()
+    }, function(){});
+  });
 });
 
 /**************************************************
