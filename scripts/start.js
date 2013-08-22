@@ -3,7 +3,8 @@
 var exec = exec = require('child_process').exec,
     path = require('path'),
     platform = process.platform,
-    arch = process.arch
+    arch = process.arch,
+    package = require(path.join(process.cwd(), 'package.json'))
 ;
 
 exec('tail -f -n0 ' + path.join(process.cwd(), 'debug.log'));
@@ -28,6 +29,6 @@ switch(platform) {
   default:
     throw 'Platform not supported!';
 }
-exec(nwPath + ' .', function() {
+exec([nwPath, (package["chromium-args"] || ''), '.'].join(' '), function() {
   process.exit(0);
 });
