@@ -4,22 +4,24 @@
   <link rel="stylesheet/less" type="text/css" href="assets/css/jengine-builder.less" />
   <script type="text/javascript">
     logger = require('logger');
+    fs = require('fs');
+    path = require('path');
     browserRequire = require('browser-require');
     $ = browserRequire('jquery');
     browserRequire('jquery-plugins');
     browserRequire('bootstrap-js');
     _ = browserRequire('underscore');
     Backbone = browserRequire('custom-backbone');
+    JEngine = browserRequire('jengine');
     browserRequire('localstorage-object');
     requireTemplate = require('require-template');
-    requireTemplate.addPath('node_modules/jengine-builder/templates');
+    requireTemplate.addPath(path.join('node_modules/jengine-builder/templates'));
 
     nwGui = require('nw.gui');
     nwGui.Window.get().showDevTools();
 
     JEngineBuilder = browserRequire('jengine-builder');
     $(function () {
-      var path = require('path');
       var opts = require(path.join(process.cwd(), 'package.json'));
       Application = new JEngineBuilder(opts['jengine-builder']);
       Application.start();

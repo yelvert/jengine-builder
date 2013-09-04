@@ -1,3 +1,9 @@
 [submodule "node_modules/bootstrap"]
 	path = node_modules/bootstrap
 	url = git://github.com/twbs/bootstrap.git
+[submodule "node_modules/threejs"]
+	path = node_modules/threejs
+	url = https://github.com/mrdoob/three.js.git
+[submodule "node_modules/threejs-stats"]
+	path = node_modules/threejs-stats
+	url = https://github.com/mrdoob/stats.js.git
