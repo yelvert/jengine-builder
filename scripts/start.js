@@ -4,12 +4,10 @@ var exec = exec = require('child_process').exec,
     path = require('path'),
     platform = process.platform,
     arch = process.arch,
-    package = require(path.join(process.cwd(), 'package.json'))
+    package = require(path.join(process.cwd(), 'package.json')),
+    nwPath = path.join(process.cwd(), 'bin', 'node-webkit')
 ;
 
-exec('tail -f -n0 ' + path.join(process.cwd(), 'debug.log'));
-
-var nwPath = path.join(process.cwd(), 'bin', 'node-webkit');
 switch(platform) {
   case 'linux':
     if (arch === 'ia32') {
