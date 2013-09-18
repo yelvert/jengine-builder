@@ -27,6 +27,8 @@ switch(platform) {
   default:
     throw 'Platform not supported!';
 }
-exec([nwPath, (package["chromium-args"] || ''), '.'].join(' '), function() {
+var run = [nwPath, (package["chromium-args"] || ''), '.'].join(' ');
+console.log(run);
+exec(run, function() {
   process.exit(0);
 });
