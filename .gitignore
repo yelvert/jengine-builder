@@ -3,3 +3,4 @@
 /bin/**/*
 /tmp/*
 /tmp/**/*
+/node_modules/jengine/jengine.js
